@@ -3,7 +3,7 @@
 *******************************************/
 body {
   font-family: "Open sans", sans-serif;
-  color: red;
+  color: black;
   padding: 0;
   margin: 0;
   /* background-color: burlywood; */
@@ -76,7 +76,7 @@ h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: black;
+  color: white;
   transition: 0.3s;
   font-size: 0.94rem;
   font-family: "Open Sans", sans-serif;
@@ -249,7 +249,7 @@ section {
 }
 .section-title {
   text-align: center;
-  padding-bottom: 1.88rem30px;
+  padding-bottom: 1.88rem;
 }
 .section-title h2 {
   font-size: 2rem;
@@ -276,11 +276,69 @@ section {
 }
 
 /* ****************************************
+# About sections
+*******************************************/
+.about .content h3 {
+  font-weight: 600;
+  font-size: 1.63rem;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding-left: 1.75rem;
+  position: relative;
+}
+
+.about .content ul li + li {
+  margin-top: 0.63rem;
+}
+
+.about .content ul i {
+  position: absolute;
+  left: 0;
+  top: 0.13rem;
+  font-size: 20px;
+  color: #ff7f5d;
+  line-height: 1;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+.about .content .btn-learn-more {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.06rem;
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  transition: 0.3s;
+  line-height: 1;
+  color: #ff7f5d;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  margin-top: 0.38rem;
+  border: 0.13rem solid #ff7f5d;
+}
+
+.about .content .btn-learn-more:hover {
+  background: #ff7f5d;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ****************************************
 # Our values
 *******************************************/
 .our-values .card {
   border: 0;
-  padding: 160px 20px 20px 20px;
+  padding: 10rem 1.25rem 1.25rem 1.25rem;
   position: relative;
   width: 100%;
   background-size: cover;
@@ -292,16 +350,16 @@ section {
   z-index: 10;
   background: rgba(255, 255, 255, 0.9);
   padding: 15px 30px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0rem 0.13rem 0.94rem rgba(0, 0, 0, 0.1);
   transition: 0.3s;
   transition: ease-in-out 0.4s;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 .our-values .card-title {
   font-weight: 700;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 0.94rem;
 }
 
 .our-values .card-title a {
@@ -317,7 +375,7 @@ section {
   color: #777777;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75rem;
   transition: 0.4s;
   text-decoration: none;
 }
