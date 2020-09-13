@@ -394,3 +394,28 @@ section {
 .our-values .card:hover .card-text {
   color: #fff;
 }
+
+/* ****************************************
+# Our team
+*******************************************/
+.team .member {
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  background: white;
+  box-shadow: 0 0 1rem rgba(0, 0, 0 0.05);
+}
+.team .member .member-img {
+  position: relative;
+  overflow: hidden;
+  height: 20rem;
+}
+.team .member .member-img {
+  padding: 1.56rem 0.94rem;
+}
+.team .member .member-img h4 {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  color: black;
+}
