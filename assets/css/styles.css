@@ -232,6 +232,7 @@ h6 {
   margin-top: 1.88rem;
   border: 0.13rem solid #fff;
   color: #fff;
+  text-decoration: none;
 }
 #hero .btn-get-started:hover {
   background: #ff7f5d;
@@ -393,6 +394,7 @@ section {
 .our-values .card:hover .card-title a,
 .our-values .card:hover .card-text {
   color: #fff;
+  text-decoration: none;
 }
 
 /* ****************************************
@@ -469,3 +471,19 @@ section {
 .team .member:hover .social {
   opacity: 1;
 }
+
+/* .navbar {
+  background-color: red;
+  width: 480px;
+  
+}
+
+.form-inline {
+  background-color: blue;
+  width: 450px;
+}
+
+.form-control {
+  background-color: green;
+  width: 350px;
+} */
