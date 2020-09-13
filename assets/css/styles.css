@@ -413,9 +413,59 @@ section {
 .team .member .member-img {
   padding: 1.56rem 0.94rem;
 }
-.team .member .member-img h4 {
+/* .team .member .member-img h4 {
   font-weight: 700;
   margin-bottom: 0.4rem;
   font-size: 1.1rem;
   color: black;
+  justify-items: center;
+  display: inline-block;
+} */
+
+/* .team .member .member-info {
+  padding: 15px 5px;
+} */
+
+.team .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 0.31rem;
+  font-size: 1.13rem;
+  color: #052c3f;
+  text-align: center;
+}
+
+.team .member .member-info span {
+  display: block;
+  font-size: 0.81rem;
+  font-weight: 400;
+  color: #aaaaaa;
+  text-align: center;
+}
+
+.team .member .social {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 2.5rem;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.team .member .social a {
+  transition: color 0.3s;
+  color: #052c3f;
+  margin: 0 0.63rem;
+  padding-top: 8px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.team .member .social a:hover {
+  color: #ff7f5d;
+}
+.team .member:hover .social {
+  opacity: 1;
 }
