@@ -1,0 +1,14 @@
+Guia
+1- al momento de crear funciones, se debe asegurar que cada id se mantenga statica.
+y no pueda ser modificable, 'created_at' debe ser  
+
+
+
+Base Structures
+    client
+    developer
+
+
+Storage functions:
+    new_id(struct)
+        Genera una nueva llave para una copia de alguna estructura

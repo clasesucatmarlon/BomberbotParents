@@ -1,0 +1,42 @@
+[
+    {
+        "created_at": "2020-09-14T00:11:51.984525",
+        "developer_id": "",
+        "email": "",
+        "first_name": "andrew12",
+        "id": "0057482e-f63f-11ea-ba42-e86a64f158a1",
+        "last_name": "",
+        "password": "",
+        "type_obj": "client"
+    },
+    {
+        "created_at": "2020-09-13T23:01:27.927300",
+        "developer_id": "",
+        "email": "",
+        "first_name": "",
+        "id": "f6e963d4-f63e-11ea-900d-e86a64f158a1",
+        "last_name": "",
+        "password": "",
+        "type_obj": "client"
+    },
+    {
+        "created_at": "2020-09-13T22:58:24.465806",
+        "developer_id": "",
+        "email": "jeje",
+        "first_name": "",
+        "id": "89912788-f63e-11ea-b695-e86a64f158a1",
+        "last_name": "",
+        "password": "",
+        "type_obj": "client"
+    },
+    {
+        "created_at": "2020-09-14T00:11:52.010480",
+        "developer_id": "",
+        "email": "",
+        "first_name": "",
+        "id": "ccab193e-f648-11ea-b0ea-e86a64f158a1",
+        "last_name": "",
+        "password": "",
+        "type_obj": "client"
+    }
+]
