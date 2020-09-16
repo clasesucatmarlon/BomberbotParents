@@ -1,19 +1,12 @@
-""" from flask import Flask, render_template
-
-app = Flask(__name__)
-
-@app.route("/main")
-def main_page():
-    return render_template("index.html")
-
-
-if __name__ == "__main__":
-    app.run(debug=True) """
-
 import storage.impl as st
+from flask import Flask
 
-st.saved = st.get_json_data()
-# manera insegura
-st.saved[st.idx("89912788-f63e-11ea-b695-e86a64f158a1")]["email"] = "jeje"
+#proy = st.new_id(st.proy)
 
-st.commit("jsonfile")
+st.saved = st.mongocon.find_all()
+
+
+print(st.from_key("011f5098-f847-11ea-b1bf-e86a64f158a1"))
+
+
+#st.mongocon.insert_all([st.push_data(proy, title="speedcoders")], mirror=True)

@@ -9,6 +9,11 @@ import datetime
 import os.path
 import json
 from storage import *
+from storage.mongo_client import Mongo_Connector
+
+
+mongocon = Mongo_Connector("clients", "users", "mongodb://localhost:27017/")
+
 
 """
  new_id : me retorna un nuevo id para una copia de alguna estructura
@@ -18,7 +23,7 @@ from storage import *
 def new_id(struct):
     if struct["type_obj"] in existing_structs:
         struct = struct.copy()
-        struct["id"] = str(uuid.uuid1())
+        struct["_id"] = str(uuid.uuid1())
         struct["created_at"] = datetime.datetime.now()
         return struct
 """
@@ -27,7 +32,7 @@ def new_id(struct):
  Es obligatorio que los valores a agregar coincidan con alguna estructura base
 """
 def push_data(struct, **args):
-    skip = ["id", "type_obj"]
+    skip = ["_id", "type_obj"]
     for key in args.keys():
         if key not in struct.keys():
             print(f"El dato a modificar {key} no es valido para la estructura {struct['type_obj']}")
@@ -36,6 +41,7 @@ def push_data(struct, **args):
             del args[key]
     args["created_at"] = datetime.datetime.now()
     struct.update(args)
+    return struct
 
 
 """
@@ -43,19 +49,20 @@ def push_data(struct, **args):
     saved es una lista en __init__ se encargara de recolectar todas las estructuras
 
 """
-def save(struct):
-    if "type_obj" not in struct.keys():
-        print("Esta estructura debe contener type_obj")
-        return
-    if struct["type_obj"] not in existing_structs:
-        print("El tipo de type_obj no es valido")
-        return
-    for st in saved:
-        if st["id"] == struct["id"]:
-            print("Estructura ya existente, omitiendo carga")
+def save(list_structs):
+    for struct in list_structs:
+        if "type_obj" not in struct.keys():
+            print("Esta estructura debe contener type_obj")
             return
-    else:
-        saved.append(struct)
+        if struct["type_obj"] not in existing_structs:
+            print("El tipo de type_obj no es valido")
+            return
+        for st in saved:
+            if st["_id"] == struct["_id"]:
+                print("Estructura ya existente, omitiendo carga")
+                return
+        else:
+            saved.append(struct)
 
 """
     commit - Los datos guardados en saved se pueden commitear directamente a una coleccion de mongo
@@ -88,7 +95,17 @@ def get_json_data():
            return json.loads(file_loaded.read())
 
 
+"""
+Funciones para manejar como se obtinen los objetos
+"""
+
+# buscar indice en la lista de objeto guardado
 def idx(_id):
     for i in range(len(saved)):
-        if saved[i]["id"] == _id:
+        if saved[i]["_id"] == _id:
             return i
+
+# obtener objeto completo
+def from_key(i):
+    return saved[idx(i)]
+

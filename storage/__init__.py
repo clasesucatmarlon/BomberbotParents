@@ -1,6 +1,5 @@
 
-# las structuras que pueden manejar las funciones
-existing_structs = ["client", "developer"]
+existing_structs = ["client", "developer", "proy"]
 
 #   en saved se guardaran todos los objetos guardados con:
 #
@@ -15,18 +14,18 @@ json_loaded = False
 ### Estructuras base
 
 client = {
-    "id": "",
+    "_id": "",
     "first_name": "",
     "last_name": "",
     "email": "",
-    "developer_id" : "",
+    "freelancer_id" : "",
     "password": "",
     "created_at": "",
     "type_obj": "client"
 }
 
-developer = {
-    "id": "",
+freelancer = {
+    "_id": "",
     "active_pro": {},
     "first_name": "",
     "last_name": "",
@@ -34,5 +33,17 @@ developer = {
     "client_id" : "",
     "password": "",
     "created_at": "",
-    "type_obj": "developer"
+    "type_obj": "freelancer"
+}
+
+proy = {
+    "_id": "",
+    "title": "",
+    "resumen": "",
+    "type_proyect": "",
+    "fecha_inicio": "",
+    "fecha_limite": "",
+    "clientes_ids": [],
+    "freelancers_id": [],
+    "type_obj": "proy"
 }
