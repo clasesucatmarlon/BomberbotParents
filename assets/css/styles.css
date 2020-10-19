@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap');
+
 /* ****************************************
 # Gereral styles
 *******************************************/
 body {
-  font-family: "Open sans", sans-serif;
+  font-family: 'Roboto Mono', monospace;
   color: black;
   padding: 0;
   margin: 0;
@@ -410,23 +412,18 @@ section {
 .team .member .member-img {
   position: relative;
   overflow: hidden;
-  height: 20rem;
-}
-.team .member .member-img {
   padding: 1.56rem 0.94rem;
 }
-/* .team .member .member-img h4 {
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-  font-size: 1.1rem;
-  color: black;
-  justify-items: center;
-  display: inline-block;
-} */
 
-/* .team .member .member-info {
-  padding: 15px 5px;
-} */
+.team .member .member-img img{
+  height:100%;
+  width: 100%;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 
 .team .member .member-info h4 {
   font-weight: 700;
@@ -453,16 +450,20 @@ section {
   opacity: 0;
   transition: ease-in-out 0.3s;
   text-align: center;
-  background: rgba(255, 255, 255, 0.85);
+  color: white;
+  background: rgba(255, 255, 255, 0.794);
+  background-position-x: -10px;
 }
 
 .team .member .social a {
   transition: color 0.3s;
   color: #052c3f;
   margin: 0 0.63rem;
-  padding-top: 8px;
+  font-size: 1.4rem;
+  /* padding-top: 8px; */
   display: inline-block;
   text-decoration: none;
+  
 }
 
 .team .member .social a:hover {
